@@ -2,7 +2,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 /* ---------- Portfolio Calculator ---------- */
 // Get your free API key at https://finnhub.io (no credit card needed) and paste it below.
-const FINNHUB_KEY = d9e49dpr01qh241acor0d9e49dpr01qh241acorg;
+const FINNHUB_KEY = d9e49dpr01qh241acor0d9e49dpr01qh241acorg ;
 
 const calcState = []; // { ticker, name, price, changePct, pe, low52, high52, allocation }
 
