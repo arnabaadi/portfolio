@@ -21,7 +21,7 @@
     <a href="#ledger">Experience</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
-    <a href="#calculator">Calculator</a>
+    <a href="calculator.html" target="_blank" rel="noopener">Calculator</a>
     <a href="Arnab_Aadi_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -50,7 +50,6 @@
       <span class="tick">OPERATIONS <i>▲</i></span>
       <span class="tick down">SQL <i>▼</i></span>
       <span class="tick up">PYTHON <i>▲</i></span>
-      <!-- duplicate for seamless loop -->
       <span class="tick up">DATA SCIENCE <i>▲</i></span>
       <span class="tick">FINANCIAL MARKETS <i>▲</i></span>
       <span class="tick down">RISK &amp; ANALYSIS <i>▼</i></span>
@@ -165,58 +164,8 @@
     </div>
   </section>
 
-  <section id="calculator" class="calculator reveal">
-    <p class="section-label">05 — Portfolio Calculator</p>
-    <p class="calc-intro">
-      Enter a budget and search real stock tickers to see live prices and fundamentals — this
-      tool shows data, not predictions or recommendations. You decide the allocation.
-    </p>
-
-    <div class="calc-controls">
-      <label class="calc-field">
-        <span>Budget ($)</span>
-        <input type="number" id="calc-budget" placeholder="1000" min="0" step="1">
-      </label>
-      <label class="calc-field">
-        <span>Ticker</span>
-        <input type="text" id="calc-ticker" placeholder="AAPL" autocomplete="off">
-      </label>
-      <button id="calc-add" class="btn btn-primary" type="button">Add Stock</button>
-    </div>
-
-    <p id="calc-error" class="calc-error"></p>
-
-    <div class="calc-table-wrap">
-      <table class="calc-table">
-        <thead>
-          <tr>
-            <th>Ticker</th>
-            <th>Price</th>
-            <th>Day %</th>
-            <th>P/E</th>
-            <th>52wk Range</th>
-            <th>Allocation ($)</th>
-            <th>Shares</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody id="calc-tbody"></tbody>
-      </table>
-    </div>
-
-    <div class="calc-summary">
-      <span>Budget: <strong id="calc-budget-display">$0</strong></span>
-      <span>Allocated: <strong id="calc-allocated">$0</strong></span>
-      <span>Remaining: <strong id="calc-remaining">$0</strong></span>
-    </div>
-
-    <p class="calc-disclaimer">
-      Data pulled live from Finnhub. For informational use only — not investment advice.
-    </p>
-  </section>
-
   <section id="contact" class="contact reveal">
-    <p class="section-label">06 — Contact</p>
+    <p class="section-label">05 — Contact</p>
     <h2>Let's talk.</h2>
     <p class="contact-copy">Open to internships and entry-level roles in data science and finance.</p>
     <div class="contact-links">
