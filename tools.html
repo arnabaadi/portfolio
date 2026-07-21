@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tools — Arnab Aadi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a href="index.html" class="wordmark">AA</a>
+  <nav class="site-nav">
+    <a href="index.html">← Back to Portfolio</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom: 1rem;">
+    <p class="eyebrow">TOOLS</p>
+    <h1 style="font-size: clamp(2.2rem, 6vw, 3.6rem);">Small Tools</h1>
+    <p class="hero-line" style="max-width: 52ch;">
+      A couple of small, functional things I built — a budget-based stock allocator and a
+      quick parking finder. Both pull real data, nothing simulated.
+    </p>
+  </section>
+
+  <section id="calculator" class="calculator">
+    <p class="section-label">01 — Portfolio Calculator</p>
+    <p class="calc-intro">
+      Enter a budget and search real stock tickers to see live prices and fundamentals.
+      This tool shows data, not predictions or recommendations — you decide the allocation.
+    </p>
+
+    <div class="calc-controls">
+      <label class="calc-field">
+        <span>Budget ($)</span>
+        <input type="number" id="calc-budget" placeholder="1000" min="0" step="1">
+      </label>
+      <label class="calc-field">
+        <span>Ticker</span>
+        <input type="text" id="calc-ticker" placeholder="AAPL" autocomplete="off">
+      </label>
+      <button id="calc-add" class="btn btn-primary" type="button">Add Stock</button>
+    </div>
+    <p class="calc-hint">e.g. AAPL, MSFT, NKE, GOOGL, TSLA, AMZN</p>
+
+    <p id="calc-error" class="calc-error"></p>
+
+    <div class="calc-table-wrap">
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Price</th>
+            <th>Day %</th>
+            <th>P/E</th>
+            <th>52wk Range</th>
+            <th>Allocation ($)</th>
+            <th>Shares</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="calc-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="calc-summary">
+      <span>Budget: <strong id="calc-budget-display">$0</strong></span>
+      <span>Allocated: <strong id="calc-allocated">$0</strong></span>
+      <span>Remaining: <strong id="calc-remaining">$0</strong></span>
+    </div>
+
+    <p class="calc-disclaimer">
+      Data pulled live from Finnhub. For informational use only — not investment advice.
+    </p>
+  </section>
+
+  <section id="parking" class="parking">
+    <p class="section-label">02 — Parking Finder</p>
+    <p class="calc-intro">
+      Enter a zip code and jump straight to Google Maps showing parking options nearby.
+    </p>
+
+    <div class="calc-controls">
+      <label class="calc-field">
+        <span>Zip Code</span>
+        <input type="text" id="parking-zip" placeholder="02139" inputmode="numeric" maxlength="10" autocomplete="postal-code">
+      </label>
+      <button id="parking-go" class="btn btn-primary" type="button">Find Parking</button>
+    </div>
+
+    <p id="parking-error" class="calc-error"></p>
+    <p class="calc-disclaimer">
+      Opens Google Maps in a new tab — no data is collected or stored here.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Arnab Aadi</span>
+</footer>
+
+<script src="tools.js"></script>
+</body>
+</html>
